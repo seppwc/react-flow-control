@@ -2,10 +2,20 @@
 
 Component library for declaritive JSX control flow.
 
+## Components
+<!-- :heavy_minus_sign: /  :heavy_check_mark:-->
+|   Name	|   Props                   	            |   Description 	|    ready for use         |
+|---	    |---                                     	|---        	    |---                 |
+|   Show    | when: boolean, fallback: ()=>JSX.Element	| controls render state of children based on truthiness of `when`, can opt to render fallback with `fallback` when renders if `when` is falsey otherwise returns null         	| :heavy_check_mark: |
+|   For     | each: T[], of: object, in: object         | loops over items in data set and runs child render prop for each element, props are exclusionary, `each` maps over elements in array, `of` maps over keyvalues in object and in `maps` over keys in object     	| :heavy_check_mark: |
+|   Switch  | value: T  type: 'all' (default)/'first'/'last'  |`switch` is used in conjunction with `case` and `default` to render `case` components children where there `is` value matches the switches `value` prop, can change the render logic with `type` which can either render `all` cases whitch match its value, just the `first` item in the children or the `last` item to match | :heavy_minus_sign: |
+|   Case    | is: T                                    	|  used in conjunction with `switch`, `is` to be a value to be compared to the `switch` value, case children will be rendered if truthy else `null` is returned        	| :heavy_minus_sign: |
+|   Default |                                        	|  used in conjunction with `switch`, will render its children only when no `cases` are rendered       | :heavy_minus_sign: |
+
 
 ## Show
 
-The show component is used to replace a typical patters of
+The show component is used to replace a typical patterns of
 ```jsx
     data && <Component />
 ```
