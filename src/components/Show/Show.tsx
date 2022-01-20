@@ -1,10 +1,15 @@
-import React from 'react';
-import './show.scss';
+import React from 'react'
 
-export interface ShowProps {}
+export interface ShowProps {
+  when: boolean
+  fallback?: () => JSX.Element
+  children: React.ReactNode
+}
 
-export const Show: React.FC<ShowProps> = ({ children }) => {
-  return (
-    <div>{ children }</div>
-  );
+export function Show({
+  when,
+  fallback,
+  children
+}: ShowProps): JSX.Element {
+  return Boolean(when) ? <>{children}</> : fallback ? fallback() : <></>
 }
