@@ -1,6 +1,6 @@
 # React-Flow-Control
 
-Component library for declaritive JSX control flow.
+React component library for declarative JSX control flow.
 
 ## Components
 <!-- :heavy_minus_sign: /  :heavy_check_mark:-->
