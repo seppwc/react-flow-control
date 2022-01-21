@@ -2,6 +2,8 @@
 
 React component library for declarative JSX control flow.
 
+<img height="200" width="100%" src="./src/assets/React-flow-control.svg">
+
 ## Components
 <!-- :heavy_minus_sign: /  :heavy_check_mark:-->
 |   Name	|   Props                   	            |   Description 	|    ready for use         |
