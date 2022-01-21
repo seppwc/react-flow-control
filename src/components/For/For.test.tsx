@@ -1,5 +1,5 @@
 import React from 'react';
-import { For, ForProps } from '..';
+import { For, ForProps } from '.';
 import { render, screen } from '@testing-library/react';
 
 const defaultProps: ForProps = {
