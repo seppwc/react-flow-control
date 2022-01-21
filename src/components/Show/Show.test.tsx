@@ -1,5 +1,5 @@
 import React from 'react';
-import { Show, ShowProps } from '../Show';
+import { Show, ShowProps } from './Show';
 import { render, screen } from '@testing-library/react';
 
 const defaultProps: Omit<ShowProps, "children"> = {
@@ -40,7 +40,7 @@ describe('Show', () => {
   });
 
   it('renders children if "when" is true, with fallback', () => {
-    setup({when: false, fallback: FallBack});
+    setup({when: true, fallback: FallBack});
     expect(screen.queryByText(Text.default)).toBeTruthy()
     expect(screen.queryByText(Text.fallback)).toBeNull()
   });
