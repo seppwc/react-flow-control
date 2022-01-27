@@ -14,12 +14,12 @@ export default {
     {
       file: `./dist/${pkg.module}`,
       format: 'es',
-      sourcemap: true,
+      sourcemap: false,
     },
     {
       file: `./dist/${pkg.main}`,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: false,
     },
   ],
   plugins: [
