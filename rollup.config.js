@@ -1,4 +1,4 @@
-import typescript from 'rollup-plugin-typescript2';
+import typescript from 'rollup-plugin-ts';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import commonjs from '@rollup/plugin-commonjs';
@@ -27,27 +27,13 @@ export default {
     commonjs(),
     postcss(),
     typescript({
-      typescript: ts,
-      tsconfig: 'tsconfig.json',
-      tsconfigDefaults: {
-        exclude: [
-          '**/*.spec.ts',
-          '**/*.test.ts',
-          '**/*.stories.ts',
-          '**/*.spec.tsx',
-          '**/*.test.tsx',
-          '**/*.stories.tsx',
-          'node_modules',
-          'bower_components',
-          'jspm_packages',
-          'dist',
-        ],
-        compilerOptions: {
-          sourceMap: true,
-          declaration: true,
-        },
-      },
-    }),
+      transpiler: 'typescript',
+      tsconfig: (resolvedConfig) => ({
+        ...resolvedConfig,
+        sourceMap: false,
+        declaration: true,
+        declarationMap: false,
+      })}),
     terser({
       output: {
         comments: false,
