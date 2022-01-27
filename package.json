@@ -1,7 +1,7 @@
 {
   "name": "react-flow-control",
   "license": "MIT",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "private": false,
   "description": "React component library for declarative JSX control flow",
   "author": "Sepp Wikramaratna-Clarke",
