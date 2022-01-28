@@ -60,6 +60,14 @@ function myComponent(){
 
 `react-flow-control` also provides utilities for loops, and switches.
 
+
+## install
+```bash
+    npm install react-flow-control
+    yarn add react-flow-control
+```
+
+
 ## Contributing
 
 If theres a control flow you think could be useful in this pattern please make and issue or pr. All contributions are welcome, in the form of bug fixes, docs, tests aswell as features. Below are some features of this repo for those running this package locally.
