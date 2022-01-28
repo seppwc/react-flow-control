@@ -18,7 +18,7 @@ Case.isCase = true
 Case.isDefault = false
 
 
-export const Default: SwitchChild<never> = ({ children }) => {
+export const Default: SwitchChild<{children: React.ReactNode}> = ({ children }) => {
   return (
     <>{children}</>
   );
