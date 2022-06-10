@@ -12,8 +12,9 @@ export type ForProps<T> = EachType<T>
 
 export function For<T>(props: ForProps<T>): JSX.Element {
   if(props.each) {
-    return (<>
-      {props.each.map((v,i,a)=><React.Fragment key={JSON.stringify(v)}>{props.children(v,i,a)}</React.Fragment>)}</>)
+    return (
+      <>{props.each.map((v,i,a) => props.children(v,i,a)}</>
+    )
   }
 
   return <></>
