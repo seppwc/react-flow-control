@@ -47,8 +47,8 @@ function myComponent(){
     const {data, loading, error} = useSomeHook()
 
     return (
-        <Show when={!loading} fallback={()=> <LoadingSpinner/>}>
-            <Show when={!error} fallback={()=><ErrorComponent/>}>
+        <Show when={!loading} fallback={<LoadingSpinner/>}>
+            <Show when={!error} fallback={<ErrorComponent/>}>
                 <ThingIActuallyWantToRender />
             </Show>
         </Show>
