@@ -11,5 +11,5 @@ export function Show({
   fallback,
   children
 }: ShowProps): JSX.Element {
-  return Boolean(when) ? <>{children}</> : fallback ? fallback() : <></>
+  return <>{Boolean(when) ? children : fallback || null}</>;
 }
